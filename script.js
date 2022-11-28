@@ -1,64 +1,79 @@
- window.addEventListener('load',() =>{
-    const form   = document.querySelector('.input') ; 
-    const input1 =  document.querySelector('#input1') ; 
-    const input2 =  document.querySelector('#input2') ; 
-    const list_el = document.querySelector('.div') ;
-    
-    form.addEventListener('submit', e => {
-        e.preventDefault() ; 
-        const task1 = input1.value ;
-        const task2 = input2.value ; 
-        if(!task1)
-        {
-            alert('Please Enter the Tittle') ;    
-            return ; 
+let string ='';
+let string1="" ; 
+let square = ''
+var flag = 0 ;
+document.querySelector('input').value = string;
+let buttons = document.querySelectorAll('.button');
+Array.from(buttons).forEach((but) => {
+    but.addEventListener('click', (e) => {
+        try {
+            if (e.target.innerHTML == 'Enter') {
+                string = eval(string);
+                document.querySelector('input').value = string;
+                string1 = string ; 
+                string='' ; 
+            }
+            else if (e.target.innerHTML == 'clear') {
+                string = "";
+                document.querySelector('input').value = string;
+            }
+            else if (e.target.innerHTML == 'del') {
+                string = string.substring(0, string.length - 1);
+                document.querySelector('input').value = string;
+            }
+            else if (e.target.innerHTML == "ans") {
+                string = string1 ;
+                document.querySelector('input').value = string;
+            }
+            else if (e.target.innerHTML == "±") {
+                string += '*' ; 
+                string += '-1' ; 
+            }
+            else {
+                if(string.length==1 && string[0]=='0' && e.target.innerHTML == '0'){
+                    
+                    string = '0' ;
+                }
+                
+                if (e.target.innerHTML == 'x' && square.length==0) {
+                    string = string + '*';
+                }
+                else if (e.target.innerHTML == '÷' && square.length==0) {
+                    string = string + '/';
+                }
+                 else if (e.target.innerHTML == '√') {
+                     square = '0' ;
+                     flag = 1 ;
+                     document.querySelector('input').value = e.target.innerHTML;
+                 }
+                else {
+                    var st =  e.target.innerHTML ;
+                    if(square.length>0 && (st>='0' && st<= '9') && flag == 1){
+                        square  += st ;
+                        document.querySelector('input').value = square;
+                    }
+                    else if(square.length>1){
+                        var b = parseInt(square) ; 
+                        var a = Math.sqrt(b) ; 
+                        var d = toString(a) ; 
+                        square='' ; 
+                        string+=d ; 
+                        string += st ; 
+                        flag = 0 ;
+                    }
+                    else {
+                        string = string + st;
+                    }
+                }
+
+                document.querySelector('input').value = string;
+            }
         }
-        const task_el = document.createElement("div") ; 
-        task_el.classList.add("div2") ;
-
-        const task_content_el1 = document.createElement("div") ; 
-        task_content_el1.classList.add("content1") ;
-        
-        task_el.appendChild(task_content_el1) ; 
-
-        const task_input1 = document.createElement("input") ; 
-        task_input1.classList.add("div3")
-        task_input1.type = "text" ; 
-        task_input1.value = task1 ; 
-        task_input1.setAttribute("readonly", "readonly") ;
-
-        task_content_el1.appendChild(task_input1) ;
-
-        const task_content_el2 = document.createElement('div') ; 
-        task_content_el2.classList.add('content2') ;
-        task_content_el2.innerText = task2 ; 
-
-        task_el.appendChild(task_content_el2) ; 
-        
-        const task_input2 = document.createElement("input") ; 
-        task_input2.classList.add("div4")
-        task_input2.type = "text" ; 
-        task_input2.value = task2 ; 
-        task_input2.setAttribute("readonly", "readonly") ;
-
-        task_content_el2.appendChild(task_input2) ;
-
-        const action = document.createElement('div') ; 
-        action.classList.add('content3') ; 
-
-        task_el.appendChild(action) ; 
-
-        const action1 = document.createElement("button") ; 
-        action1.classList.add("div5") ;  
-        action1.innerText = 'X'
-
-        action.appendChild(action1) ;
-
-        list_el.appendChild(task_el) ;
-
-        action1.addEventListener('click', e=>{
-              list_el.removeChild(task_el) ; 
-        })
+        catch(err)
+        {
+            string = "Error" ;
+            document.querySelector('input').value = string;
+            string="0" ;
+        }
     })
-    
 })

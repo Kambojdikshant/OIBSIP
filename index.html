@@ -5,39 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoList</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header id="header">
-        <h3>To-Do List Web App</h3>
-    </header>
-    <form class="input">
-        <input type="text" id="input1" placeholder="Title">
-        <textarea type="text" id="input2" placeholder="Description"></textarea>
-        <input type="submit" id="input3" value="Save">
-    </form>
-    <main>
-        <section class="div1">
-            <pre>Tittle                                                Description                                                                                                                          Delete </pre>
-            <hr>
-            <div class="div">
-                <!-- <div class="div2">
-                    <div class="content1">
-                        <input type="text" value="Tittle" class="div3"  readonly>
-                    </div>
-                    <div class="content2">
-                        <input type="text" value="Description" class="div4"  readonly>
-                    </div>
-                    <div class="content3">
-                        <button class="div5">X</button>
-                    </div>
-                </div> -->
-            </div>
-            
-        </section>
-    </main>
+
+    <div class="body2">
+        <table class="table1">
+            <tr >
+                <input type="text"class="common">
+            </tr>
+            <tr>
+                <td class="common"><button class="blue1 button">(</button></td>
+                <td><button class="blue1 button">)</button></td>
+                <td><button class="blue1 button">ans</button></td>
+                <td><button class="blue1 button">del</button></td>
+                <td><button class="blue1 arrange button" >clear</button></td>
+            </tr>
+            <tr>
+                <td><button class="blue2 button">7</button></td>
+                <td><button class="blue2 button">8</button></td>
+                <td><button class="blue2 button">9</button></td>
+                <td><button class="blue1 button">%</button></td>
+                <td><button class="blue1 arrange button">√</button></td>
+            </tr>
+            <tr>
+                <td><button class="blue2 button">4</button></td>
+                <td><button class="blue2 button">5</button></td>
+                <td><button class="blue2 button">6</button></td>
+                <td><button class="blue1 button">x</button></td>
+                <td><button class="blue1 arrange button">÷</button></td>
+            </tr>
+            <tr>
+                <td><button class="blue2 button">1</button></td>
+                <td><button class="blue2 button">2</button></td>
+                <td><button class="blue2 button">3</button></td>
+                <td><button class="blue1 button">+</button></td>
+                <td><button class="blue1  arrange button">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="blue1 button">.</button></td>
+                <td><button class="blue2 button">0</button></td>
+                <td><button class="blue1 button">±</button></td>
+                <td><button class="blue3 button">Enter</button></td>
+            </tr>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 

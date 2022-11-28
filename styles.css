@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(95, 95, 245);
+}
+
+.body2{
+    width: 46vh;
+    height: 58vh;
+    border: 2px solid white;
+    border-radius: 2vh;
+    margin:18vh auto;
+    align-items: center;
+    background-color: white;
+}
+.table1{
+    display: inline;
+    padding: 2vh;
+}
+.blue1{
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 7.7vh;
+    height: 7vh;
+    font-size: 1.8vh;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    background-color: rgb(152, 186, 250);
+    color: blue;
+}
+.blue2{
+    border: 2px solid white;
+    border-radius: 1vh;
+    width: 7.7vh;
+    height: 7vh;
+    font-size: 2vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    
+    background-color: rgb(213, 227, 253);
+    color: black;
+}
+.blue3{
+    border: 2px solid white;
+    border-radius: 1vh;
+    width: 14.6vh;
+    height: 7vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial ;
+    font-size: 2vh;
+    background-color: blue;
+    color: white;
+}
+.arrange{
+    margin-left: -6.8vh;
+}
+
+input{
+    border: 2px solid white;
+    border-radius: 1vh;
+    width: 37vh;
+    height: 10vh;
+    font-size: 1.8vh;
+    text-align: right ;
+    padding:10px ;
+    background-color: rgb(213, 227, 253);
+    color: blue;
+}
+
+.common{
+    margin: 2vh 3vh;
+}
+.button{
+    cursor: pointer;
+}
+
+
