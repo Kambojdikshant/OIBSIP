@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color:white ;
+    margin: 0px; 
+    padding: 0px;
+}
+#text1{
+    text-align: center;
+    margin-top: 6vh;
+}
+#text2{
+    text-align: center;
+    margin-top: 1.5vh;
+}
+.box{
+    width: 100%; 
+    height: 40vh; 
+    background-color: white;
+    color: black;
+}
+img{
+    width: 45vh;
+    height: 40vh;
+    margin-top : -37vh ;
+    margin-left: 140vh;
+}
+#para{
+    text-align: center;
+}
+
+.para1{
+    padding: 10vh 15vh;
+    font-size: large;
+    font-family :Verdana, Geneva, Tahoma, sans-serif
+}
+.div2{
+    width : 80vh ; 
+    height : 30vh ;
+    margin: auto;
+}
+#para2{
+    text-align:  center;
+    margin-top: 3vh;
+}
+hr{
+    margin-top: 30vh;
+}
